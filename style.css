@@ -1,0 +1,403 @@
+
+/*
+All browsers use default padding and margin values for each element, which makes unstyled pages look nice, but for us they just get in the way of our own styles.
+
+To get rid of all these messy margins, we're going to use a very simple css reset, which is just a rule that gets rid of the default padding and margins on the elements we're using.
+*/
+'
+body, div, h1, h2, h3, h4, h5, h6, p, ul, img {margin:0px; padding:0px; }
+
+
+body {
+/*	font-family: Arial, Helvetica, sans-serif;*/
+	font-family: "Trebuchet MS", sans-serif;
+    background: #ebe8e8; /* white ish */
+}
+
+/* contains the main body of page
+*/
+.container {
+	width: 800px;
+	margin: 0 auto;
+	
+	/* debug */
+ /* border-style: solid;
+  border-width: 1px;
+  border-color: green;*/
+  
+}
+
+/* this is for gamepage (TODO rename) */
+.container-wide {
+	width: 1200px;
+	margin: 0 auto;
+	
+	/* debug */
+ /* border-style: solid;
+  border-width: 1px;
+  border-color: green;*/
+}
+
+
+#main  {
+/*    background: url(images/LeafDream_banner_dark_linkedin.png) no-repeat; */
+/*    background: url(images/roadthrupine_banner.png) no-repeat; */
+}
+
+#logo h1{font-size: 70px; color: #e4dfdf; }		/* the big 'Ken Catterall' */
+#logo {
+    height: 200px;
+    width: 235px;
+    float: left; 
+	
+ /* border-style: solid;
+  border-width: 1px;
+  border-color: hotpink;
+  */
+}
+
+#logoimg {
+    height: 200px;
+    width: 235px;
+    float: left; 
+	
+ /* border-style: solid;
+  border-width: 1px;
+  border-color: hotpink;
+  */
+}
+
+#tagline h3 {font-size: 30px; color: #ddaaaa; }	/* the less big page subtitle e.g. 'Unity Demos' */
+#tagline {
+    float: left;
+    padding-top: 100px;
+    padding-left: 100px; 
+	
+ /* border-style: solid;
+  border-width: 1px;
+  border-color: red;
+  */
+}
+/*
+#main .container  {
+    background: url(images/LeafDream_banner_dark_linkedin.png) no-repeat; 
+}
+*/
+
+#header {							/* the coloured area at the top of the page */
+    height: 300px;
+   /* background: url(images/LeafDream_banner_dark_linkedin.png) no-repeat; */
+}
+
+
+/* Site navigation menu */
+#menu {
+/*  border-style: solid;
+  border-width: 1px;
+  border-color: green;
+  */
+}
+
+ul#menu {
+    list-style: none; 
+    padding-top: 55px; 
+}
+ 
+ul#menu li a {
+    font-size: 20px;
+    color: #e7e6e6;
+    text-decoration: none; 
+}
+
+ul#menu li {
+    float: left; 
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
+
+
+#content h2 {
+    font-size: 36px;
+    color: #015878; 
+    padding-top: 25px; 
+}
+ 
+#content h3 {
+    font-size: 24px;
+    color: #444444;
+    padding-top: 20px; 
+  /*  padding-bottom: 20px; */
+}
+ 
+#content h4 {
+    font-size: 18px;
+    color: #373737;
+    font-weight: normal; 
+}
+ 
+#content p {
+    font-size: 14px;
+    color: #292828; 
+    padding-top: 20px; 
+}
+ 
+#content small {
+    font-size: 12px;
+    color: #373737; 
+}
+ 
+#content a {
+    color: #0f6c8d;
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+#content {
+    width: 510px;
+    float: left; 
+    background: #ebe8e8; 
+    padding-left: 30px;
+    padding-right: 75px; 
+	
+	
+	/* debug */
+/*  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  */
+}
+ 
+ /* sidebar
+ */
+#sidebar {
+    width: 290px;
+    float: left; 
+    background: #ebe8e8; 
+}
+
+#sidebar h2{
+    font-size: 24px;
+    color: #044055;
+    font-weight: normal;
+}
+
+#sidebar h3 {
+    font-size: 19px;
+    color: #044055;
+    font-weight: normal;
+}
+ 
+#sidebar ul li a {
+    font-size: 14px;
+    color: #393838; 
+}
+
+#sidebar ul li {
+    font-size: 14px;
+    color: #393838; 
+}
+
+
+ul#subscribe li a {
+    font-size: 18px; 
+}
+
+
+
+
+
+/* SLIDESHOW */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container h3 {
+    font-size: 24px;
+    color: #eeeeee;
+   /* padding-top: 20px; */
+/*	padding-bottom: 20px;*/
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+/* show the first image by default */
+#startSlide{
+	display: block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  /*position: absolute;*/
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+/* mplayer */
+#mplayer-sidebar {
+
+  display: inline;
+  margin-left: 0px;
+  margin-right: 10px;
+  width: 300px;
+  height: 500px;
+  padding-top: 50px;
+ float: left;
+  
+  
+ /* border-style: solid;
+  border-width: 1px;
+  border-color: blue;
+  */
+  
+}
+
+#mplayer-container {
+
+  display: block;
+  margin-left: 20px;
+  margin-right: 0px;
+  width: 800px;
+  height: 500px;
+  padding-top: 50px;
+  float: left;
+  
+  /*border-style: solid;
+  border-width: 1px;
+  border-color: red;*/
+}
+
+#canvas {
+  /*height: 480px;*/
+  /*width: 800px;*/
+  height: 100%;
+  width: 100%;
+}
+
+#content-gamepage {
+    width: 100%;
+	height: 60%;
+    float: left; 
+    background: #ebe8e8; 
+    padding-left: 30px;
+    padding-right: 75px; 
+	
+    font-size: 14px;
+    color: #292828; 
+    padding-top: 20px; 
+	overflow: auto;
+}
+
+/* block container for the logo */
+#logo-gamepage{
+	height: 40%;
+   /* background: #ebe8e8; */
+
+}
+
+/* the fullscreen toggle button(s) */
+.fullscreen {
+  height: 38px;
+  width: 38px;
+}
+
+.titleLogo {
+  display: block;
+  max-height: 250px;
+  max-width: 250px;
+  width: auto;
+  height: auto;
+  margin: auto;
+  
+  padding: 70px 0;
+  
+  /* move it up a few pixels */
+ /* position: relative; */
+ /* top: -50px;*/
+  
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+   
+		<title>Ken Catterall</title>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+		
+		<script src="RunningGameDemo/2019_05_28_webGL/TemplateData/UnityProgress.js"></script>
+		<script src="includehtml.js"></script>		
+		
+  </head>
+	  
+  
+  <body>
+		<!-- <div id="main" style="background-color: #440000" > -->
+		<div id="main" style="background: url(images/flames_banner_crop_dark.png) no-repeat">
+				
+			<div class="container-wide">		
+				
+				<div id="mplayer-sidebar">				 
+					<div id="logo-gamepage">
+						<!--<h1>Parting Shot</h1> //-->
+						<img  class="titleLogo" src="images/logo4_trans.png" alt="Parting Shot" />
+					</div>			 
+					
+					
+					<div id="content-gamepage">
+							
+						<div w3-include-html="aboutme.html"></div>		<!-- 'about me' section -->	
+						
+					</div><!--end content-gamepage -->
+					<div style="clear:both"></div>
+									
+				</div><!--end sidebar -->
+			
+				<div id="mplayer-container"><!-- here beginneth the media player -->
+			
+					<!--the canvas for the webGL app itself-->	
+					<canvas class="emscripten" id="canvas" 
+					oncontextmenu="event.preventDefault()" 
+					>
+						<!-- -->
+					</canvas>
+				
+					<!--the little fullscreen icon toggle-->	
+					<div class="fullscreen"><img src="RunningGameDemo/2019_05_28_webGL/TemplateData/fullscreen.png"
+					alt="Fullscreen" title="Fullscreen"
+					onclick="SetFullscreen(1);" /></div>
+						
+						
+					
+				</div><!--end mplayer-container-->
+				<div style="clear:both"></div>
+					
+		
+				
+				
+			</div><!--end container-wide-->
+		</div> <!-- end main -->
+	
+		
+		<script type='text/javascript'>
+			var Module = {
+					TOTAL_MEMORY: 268435456,
+					errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+					compatibilitycheck: null,
+					dataUrl: "RunningGameDemo/2019_05_28_webGL/Release/2019_05_28_webGL.data",
+					codeUrl: "RunningGameDemo/2019_05_28_webGL/Release/2019_05_28_webGL.js",
+					memUrl: "RunningGameDemo/2019_05_28_webGL/Release/2019_05_28_webGL.mem",
+				  };
+		</script>		
+		<script src="RunningGameDemo/2019_05_28_webGL/Release/UnityLoader.js">
+			<!-- -->		
+		</script>	
+		<script>
+			<!-- include external html files -->
+			includeHTML();
+		</script>
+  </body>
+</html>
